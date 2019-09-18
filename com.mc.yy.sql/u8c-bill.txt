@@ -1,0 +1,9 @@
+﻿上页下页需要入参：
+https://billnode-y3me-pre.diwork.com/uniform/bill/movenext?terminalType=1&token=bttL3VldEFhc3l5UHhmeGJOdnk4VG5yS01wRHdXbzdpeEdKWnoxcFJLREFRL1BjbitST1N1bUF1Uk5yV0V6azl3U2xYSmxkeURoalFlb3NybytjaHBVZG5FckJlQ1ViRFZSTFJyNGFLMWpxbTA9__1568172879380&source=u8c&serviceCode=orderList&refimestamp=1568194354778&billnum=voucher_order&id=1391034956468480
+
+权限耗时查看：tail -f info_udinghuo.log|grep 'getDataPermission'
+rule耗时查看：tail -f info_udinghuo.log|grep 'billrule('
+
+excel 更新billitem_base属性
+update billitem_base b,billtplgroup_base a   set b.bCanModify=0  where b.iBillEntityId=a.iBillEntityId and  b.cFieldName='productId.name' and b.cName='productName' and a.cCode='voucher_order_body_page_base_data';
+update billitem_base b,billtplgroup_base a   set b.bCanModify=0  where b.iBillEntityId=a.iBillEntityId and  b.cFieldName='skuCode' and b.cName='skuCode' and a.cCode='voucher_order_body_page_base_data';
