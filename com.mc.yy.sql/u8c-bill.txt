@@ -1,4 +1,17 @@
-﻿上页下页需要入参：
+﻿mem
+echo "flush_all" | nc 172.20.56.163 11211 
+
+linux 常用命令
+tail -n 20 filename (显示filename最后20行)
+tail -n +5 filename (从第5行开始显示文件)
+cat -n filename |grep "关键字"
+cat filename | grep -C 5 '关键字' (显示日志里匹配字串那行以及前后5行)
+cat filename | grep -B 5 '关键字' (显示匹配字串及前5行)
+cat filename | grep -A 5 '关键字' (显示匹配字串及后5行)
+sed -n '20,22p' filename(显示从20行到22行的信息)
+
+
+上页下页需要入参：
 https://billnode-y3me-pre.diwork.com/uniform/bill/movenext?terminalType=1&token=bttL3VldEFhc3l5UHhmeGJOdnk4VG5yS01wRHdXbzdpeEdKWnoxcFJLREFRL1BjbitST1N1bUF1Uk5yV0V6azl3U2xYSmxkeURoalFlb3NybytjaHBVZG5FckJlQ1ViRFZSTFJyNGFLMWpxbTA9__1568172879380&source=u8c&serviceCode=orderList&refimestamp=1568194354778&billnum=voucher_order&id=1391034956468480
 
 权限耗时查看：tail -f info_udinghuo.log|grep 'getDataPermission'
