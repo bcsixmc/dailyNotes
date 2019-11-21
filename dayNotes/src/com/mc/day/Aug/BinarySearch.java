@@ -1,6 +1,7 @@
 package com.mc.day.Aug;
 
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 class BinarySearch  {
 
@@ -27,22 +28,13 @@ class BinarySearch  {
 
     // Driver Program
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int sn = scn.nextInt();
-        int sb = scn.nextInt();
-        int db = scn.nextInt();
-        int m = 1, dec = 0, dn = 0;
-        while (sn != 0) {
-            dec = dec + (sn % 10) * m;
-            m *= sb;
-            sn /= 10;
+        String a = "2019-09-21";
+        Date b  = new Date("2019-06-23");
+        Date c = new Date("2019-07-23");
+/*        Date hopeReceiveDate = new SimpleDateFormat("yyyy-MM-dd").parse(a);
+        Date hopeReceiveDate2 = new SimpleDateFormat("yyyy-MM-dd").parse("");*/
+        if(b.before(c)){
+            System.out.println("sss");
         }
-        m = 1;
-        while (dec != 0) {
-            dn = dn + (dec % db) * m;
-            m *= 10;
-            dec /= db;
-        }
-        System.out.println(dn);;
     }
 }
