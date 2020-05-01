@@ -43,3 +43,12 @@ JQE11SV0BR-eyJsaWNlbnNlSWQiOiJKUUUxMVNWMEJSIiwibGljZW5zZWVOYW1lIjoicGlnNiIsImFzc
 5.查看有效期
 当你激活完毕后，IDEA右下角会有个Registration小长条提示框，大致的内容为：You copy is Licensed to XXX意思就会告诉你：兄弟，你已经激活成功了，激活码的许可来源是：XXX。 查看有效期的步骤为点击：Help->About这里可以看到你的IDEA的版本号、许可来源、有效期、以及一些环境 服务器激活是没有期限的，即为永久有效 如果激活失败，微信扫描下方二维关注猪哥微信公众号：裸睡的猪，回复：激活群
 
+方法二：
+
+IntelliJ IDEA for Mac 2019.3.3 破解版 最好的Mac java开发工具 已通过小编安装运行测试 100%可以使用。
+ IntelliJ IDEA for Mac 2019.3.3 破解方法：
+1、拖动IntelliJ IDEA.app到Applications目录完成安装；
+2、打开“访达”，按下shift+command+G，输入“/Library”回车，然后在资源库目录新建文件；夹“JetbrainsLicense”，拷贝安装包里Extra目录内的“jetbrains-agent.jar”到“JetbrainsLicense”目录；
+3、打开IntelliJ IDEA，提示激活时选择“evaluate for free”，依次点击菜单的"Help" → "Edit Custom VM Options..."，复制“-javaagent:/Library/JetbrainsLicense/jetbrains-agent.jar”到最后并保存，然后按command+Q完全退出应用；
+4、再次打开IntelliJ IDEA即已激活。
+IntelliJ IDEA for Mac 2019.3.3 破解版是MacOS上的java语言开发的集成环境，IntelliJ IDEA for Mac 2019.3.3破解版在业界被公认为MacOS最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具(git、svn、github等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。IDEA是JetBrains公司的产品，这家公司总部位于捷克共和国的首都布拉格，开发人员以严谨著称的东欧程序员为主。它的旗舰版本还支持HTML，CSS，PHP，MySQL，Python等。免费版只支持Java等极少数语言。 IntelliJ IDEA被认为是当前Java开发效率最快的IDE工具。它整合了开发过程中实用的众多功能，几乎可以不用鼠标可以方便的完成你要做的任何事情，最大程度的加快开发的速度。简单而又功能强大。与其他的一些繁冗而复杂的IDE工具有鲜明的对比。     
