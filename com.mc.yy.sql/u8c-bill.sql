@@ -45,3 +45,22 @@ o.iCorpId=1679514674680064 and
 o.fOutBoundQty != IFNULL(s.outqty,0);
 
 
+DELETE from orders where id=1750177404883200;
+DELETE from orders_price where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from orderdetail where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from orderdetail where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from uo_define_orderdefine  where order_id in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from orderdetailgroup where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from orderpaymentstatus where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from orderstatus where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from paymentschedules where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+DELETE from paymentexedetail where firstsourceid in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001');
+
+
+
+DELETE from orderproductapportion where iOrderDetailId 
+in (SELECT id from orderdetail where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001'));
+DELETE from uo_define_orderdetaildefine  where orderdetail_id 
+in (SELECT id from orderdetail where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001'));
+DELETE from orderdetail_price where iOrderDetailId 
+in (SELECT id from orderdetail where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001'));
