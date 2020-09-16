@@ -1,0 +1,12 @@
+"showVoucherBtn": false, //是否显示下推下游按钮
+"flowPushVoucher": false,//是否走业务流
+"isWfControlled": false,//是否审批流
+"pushProApplyOrder": true,//是否下推生产和请购
+"status": 1,//公共状态
+"verifystate": 2,//审批状态
+"nextStatus": "DELIVERGOODS",//订单状态
+"showUnAudit": false,//是否显示弃审
+"finishDelivery": false,//是否发完货
+"payStatusCode": "NOTPAYMENT", //支付状态
+"orderPayType": "FIRSTPAY",//支付方式
+
