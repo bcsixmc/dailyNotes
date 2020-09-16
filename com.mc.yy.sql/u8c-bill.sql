@@ -64,3 +64,23 @@ DELETE from uo_define_orderdetaildefine  where orderdetail_id
 in (SELECT id from orderdetail where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001'));
 DELETE from orderdetail_price where iOrderDetailId 
 in (SELECT id from orderdetail where iorderId in(SELECT id from orders where icorpid=1700708355789056 and cOrderNo='XS2020050001'));
+
+                                                 
+                                                 
+                                                 
+                                                 DELETE b FROM billitem_base b inner join bill_base a on b.iBillId = a.id where a.cBillNo = 'voucher_order' and b.cName = 'uordercorp' and tenant_id`=1806853821223168;
+ insert into billitem_base
+(`iBillId`,`iBillEntityId`,`iTplId`,`iBillTplGroupId`,`cSubId`,`cFieldName`,`cName`,`cCaption`,`cShowCaption`,`iOrder`,`iMaxLength`,`iFieldType`,`bEnum`,
+`cEnumString`,`isDeleted`,`bMustSelect`,`bHidden`,`cRefType`,`cRefId`,`cRefRetID`,`cDataRule`,`iFunctionType`,`bSplit`,`bExtend`,`iNumPoint`,`bCanModify`,
+`cSourceType`,`iMaxShowLen`,`cMemo`,`iColWidth`,`cSumType`,`iAlign`,`bNeedSum`,`bShowIt`,`bFixed`,`bFilter`,`cDefaultValue`,`cFormatData`,`cUserId`,`iTabIndex`,
+`bIsNull`,`bPrintCaption`,`bJointQuery`,`bPrintUpCase`,`bSelfDefine`,`cDataSourceName`,`cOrder`,`bCheck`,`cControlType`,`cEnumType`,`refReturn`,`bShowInRowAuth`,
+`iRowAuthBillId`,`cStyle`,`bRowAuthControlled`,`cSelfDefineType`,`bVmExclude`,`bRowAuthDim`,`isshoprelated`,`tenant_id`) 
+select a.`iBillId`,a.`iBillEntityId`,a.`iTplId`,a.`iBillTplGroupId`,a.`cSubId`,'uordercorp' as `cFieldName`,'uordercorp' as `cName`,'租户id' as `cCaption`,
+'租户id' as `cShowCaption`,'3022',a.`iMaxLength`,a.`iFieldType`,a.`bEnum`,a.`cEnumString`,a.`isDeleted`,1 as `bMustSelect`,0 as `bHidden`,a.`cRefType`,a.`cRefId`,a.`cRefRetID`,null as `cDataRule`,a.`iFunctionType`,a.`bSplit`,a.`bExtend`,a.`iNumPoint`,
+0 as `bCanModify`,a.`cSourceType`,a.`iMaxShowLen`,a.`cMemo`,a.`iColWidth`,null as `cSumType`,a.`iAlign`,a.`bNeedSum`,1 as `bShowIt`,
+a.`bFixed`,a.`bFilter`,a.`cDefaultValue`,null,a.`cUserId`,a.`iTabIndex`,
+1 as `bIsNull`,a.`bPrintCaption`,0 as `bJointQuery`,a.`bPrintUpCase`,a.`bSelfDefine`,a.`cDataSourceName`,null as `cOrder`,
+a.`bCheck`,'input' as `cControlType`,a.`cEnumType`,a.`refReturn`,a.`bShowInRowAuth`,a.`iRowAuthBillId`,a.`cStyle`,
+a.`bRowAuthControlled`,a.`cSelfDefineType`,0 as `bVmExclude`,a.`bRowAuthDim`,a.`isshoprelated`,a.`tenant_id` 
+from billitem_base a inner join bill_base b on a.iBillId=b.id inner join billtemplate_base c  on a.iTplId=c.id 
+where  b.cBillNo ='voucher_order' and a.cName='synSourceTenant' AND A.tenant_id=1806853821223168;
