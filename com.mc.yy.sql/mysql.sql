@@ -40,3 +40,11 @@ DROP PROCEDURE pro_AddColumn;
 ## 插入语句判断是否存在,不存在则插入;
 insert into permission(id,name,navigation_id,parentid) select '130','印前审查',null,'1' from DUAL WHERE NOT EXISTS(SELECT * FROM permission WHERE id='130');
 insert into navigation(id,name,parent,path,seq_num,sub_sys,url) select '39','参数配置',11,'/3/11',1,3,null from DUAL WHERE NOT EXISTS(SELECT * FROM navigation WHERE id='39');
+
+
+
+##查看执行计划##
+SET optimizer_trace="enabled=on";
+SELECT * from agentrelation  limit 10;
+SELECT * FROM information_schema.OPTIMIZER_TRACE;
+SET optimizer_trace="enabled=off";
