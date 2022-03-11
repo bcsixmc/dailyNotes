@@ -1,9 +1,4 @@
-package cn.udinghuo.thirdparty.goods.controller;
 
-import cn.udinghuo.core.exception.BizException;
-import cn.udinghuo.thirdparty.goods.tpi.UpcProductContentApiService;
-import cn.udinghuo.utils.PropertyReader;
-import cn.udinghuo.web.passport.yxy.service.YxyService;
 import com.1.cloud.search.ResponseUtils;
 import com.1.cloud.search.SearchException;
 import net.sf.json.JSONObject;
